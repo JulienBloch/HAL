@@ -16,9 +16,9 @@ xerr = BvsI[:,3]
 print(B)
 print(I)
 
-plt.scatter(B, I)
+# plt.scatter(B, I)
+plt.errorbar(B, I, yerr=yerr, xerr=xerr, ecolor='red', fmt='o')
 plt.xlabel("Current in Amperes")
 plt.ylabel("Magnetic Field in milliTesla")
 plt.title("Magnetic Field as a Function of Current, at 16 +/- .1 Torr")
-plt.errorbar(B, I, yerr=yerr, xerr=xerr)
 plt.show()
